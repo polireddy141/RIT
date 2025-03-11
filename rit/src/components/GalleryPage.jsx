@@ -1,13 +1,11 @@
-// src/components/GalleryPage.js
 import React from 'react';
 import { Container, Typography, Grid, Box } from '@mui/material';
 
 const GalleryPage = () => {
   const images = [
-    '/assets/gallery1.jpg',
-    '/assets/gallery2.jpg',
-    '/assets/gallery3.jpg',
-    '/assets/gallery4.jpg',
+    require('../assets/ritgallery-1.jfif'),
+    require('../assets/ritgallery-2.jfif'),
+    require('../assets/ritgallery-3.jfif'),
   ];
 
   return (
