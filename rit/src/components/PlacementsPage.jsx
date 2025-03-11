@@ -1,28 +1,55 @@
-// src/components/PlacementsPage.js
+// src/components/AwardsPage.js
 import React from 'react';
-import { Container, Typography, Grid, Card, CardContent } from '@mui/material';
+import { Container, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
 
-const PlacementsPage = () => {
-  const companies = [
-    { name: 'Company A', position: 'Software Engineer', year: '2024' },
-    { name: 'Company B', position: 'Data Scientist', year: '2023' },
-    { name: 'Company C', position: 'HR Manager', year: '2022' },
-    { name: 'Company D', position: 'Business Analyst', year: '2021' },
+const AwardsPage = () => {
+  const awards = [
+    {
+      title: 'Best Engineering College',
+      year: '2024',
+      placements: '200+ Placements',
+      image: require('../assets/rit1.jpg'), // Local image
+    },
+    {
+      title: 'Top Placement College',
+      year: '2023',
+      placements: '150+ Placements',
+      image: require('../assets/rit2.jpg'), // Local image
+    },
+    {
+      title: 'Excellence in Research',
+      year: '2022',
+      placements: '50+ Placements',
+      image: require('../assets/rit3.jpg'), // Local image
+    },
+    {
+      title: 'Best Innovation Award',
+      year: '2021',
+      placements: '100+ Placements',
+      image: require('../assets/rit4.jpg'), // Local image
+    },
   ];
 
   return (
     <Container>
       <Typography variant="h3" gutterBottom>
-        Campus Placements
+        Awards & Recognitions
       </Typography>
       <Grid container spacing={3}>
-        {companies.map((company, index) => (
+        {awards.map((award, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Card>
+              <CardMedia
+                component="img"
+                alt={award.title}
+                height="140"
+                image={award.image}
+                title={award.title}
+              />
               <CardContent>
-                <Typography variant="h5">{company.name}</Typography>
-                <Typography variant="body2" color="textSecondary">{company.position}</Typography>
-                <Typography variant="body2" color="textSecondary">{company.year}</Typography>
+                <Typography variant="h5">{award.title}</Typography>
+                <Typography variant="body2" color="textSecondary">{award.year}</Typography>
+                <Typography variant="body2" color="textPrimary">{award.placements}</Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -32,4 +59,4 @@ const PlacementsPage = () => {
   );
 };
 
-export default PlacementsPage;
+export default AwardsPage;
