@@ -9,9 +9,9 @@ const ContactPage = () => {
         Contact Us
       </Typography>
       <Typography variant="body1">
-        Address: RIT Rayadu Institutions of Technologies, XYZ Street, City.
+        Address: RIT Rayadu Institutions of Technologies, James Street, RYC City.
         <br />
-        Phone: +123456789
+        Phone: +987654321
         <br />
         Email: <Link href="mailto:info@rit.edu">info@rit.edu</Link>
       </Typography>
