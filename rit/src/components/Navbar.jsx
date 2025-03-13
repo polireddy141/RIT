@@ -1,4 +1,4 @@
-// src/components/Navbar.js
+
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Button, Menu, MenuItem, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleMenuClose = () => setAnchorEl(null);  // Close the dropdown
   const handleMobileMenuToggle = () => setMobileMenuOpen(!mobileMenuOpen);  // Toggle mobile menu
 
-  // Dropdown for Admissions
+  
   const renderAdmissionsMenu = () => (
     <Menu
       anchorEl={anchorEl}
@@ -28,7 +28,7 @@ const Navbar = () => {
     </Menu>
   );
 
-  // Dropdown for Courses
+  
   const renderCoursesMenu = () => (
     <Menu
       anchorEl={anchorEl}
@@ -42,7 +42,7 @@ const Navbar = () => {
     </Menu>
   );
 
-  // Main Navbar with Dropdowns
+  
   return (
     <AppBar position="sticky">
       <Toolbar>
@@ -50,14 +50,14 @@ const Navbar = () => {
           RIT Rayadu Institutions of Technologies
         </Typography>
 
-        {/* Desktop Version of Navbar */}
+        
         {!isMobile ? (
           <>
             <Button component={Link} to="/" color="inherit">Home</Button>
             <Button component={Link} to="/about" color="inherit">About</Button>
             <Button component={Link} to="/contact" color="inherit">Contact</Button>
             
-            {/* Admissions Dropdown */}
+            
             <Button 
               color="inherit" 
               onClick={handleMenuOpen}
